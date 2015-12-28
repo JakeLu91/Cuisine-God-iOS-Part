@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		238EFBD41C30CBEB0099DDED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EFBD31C30CBEB0099DDED /* AppDelegate.swift */; };
-		238EFBD61C30CBEB0099DDED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EFBD51C30CBEB0099DDED /* ViewController.swift */; };
 		238EFBD91C30CBEB0099DDED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238EFBD71C30CBEB0099DDED /* Main.storyboard */; };
 		238EFBDB1C30CBEB0099DDED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 238EFBDA1C30CBEB0099DDED /* Images.xcassets */; };
 		238EFBDE1C30CBEB0099DDED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238EFBDC1C30CBEB0099DDED /* LaunchScreen.xib */; };
 		238EFBEA1C30CBEB0099DDED /* Cuisine_GodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EFBE91C30CBEB0099DDED /* Cuisine_GodTests.swift */; };
+		238EFBF41C312B1B0099DDED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EFBF31C312B1B0099DDED /* LoginViewController.swift */; };
+		238EFBFC1C31411F0099DDED /* FriendsTimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EFBFB1C31411F0099DDED /* FriendsTimelineTableViewController.swift */; };
+		238EFBFE1C31417B0099DDED /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EFBFD1C31417B0099DDED /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +31,15 @@
 		238EFBCE1C30CBEB0099DDED /* Cuisine-God.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cuisine-God.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		238EFBD21C30CBEB0099DDED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		238EFBD31C30CBEB0099DDED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		238EFBD51C30CBEB0099DDED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		238EFBD81C30CBEB0099DDED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		238EFBDA1C30CBEB0099DDED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		238EFBDD1C30CBEB0099DDED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		238EFBE31C30CBEB0099DDED /* Cuisine-GodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cuisine-GodTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		238EFBE81C30CBEB0099DDED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		238EFBE91C30CBEB0099DDED /* Cuisine_GodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuisine_GodTests.swift; sourceTree = "<group>"; };
+		238EFBF31C312B1B0099DDED /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		238EFBFB1C31411F0099DDED /* FriendsTimelineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTimelineTableViewController.swift; sourceTree = "<group>"; };
+		238EFBFD1C31417B0099DDED /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +81,10 @@
 		238EFBD01C30CBEB0099DDED /* Cuisine-God */ = {
 			isa = PBXGroup;
 			children = (
-				238EFBD31C30CBEB0099DDED /* AppDelegate.swift */,
-				238EFBD51C30CBEB0099DDED /* ViewController.swift */,
+				238EFBFB1C31411F0099DDED /* FriendsTimelineTableViewController.swift */,
+				238EFBFD1C31417B0099DDED /* RegisterViewController.swift */,
+				238EFBF31C312B1B0099DDED /* LoginViewController.swift */,
 				238EFBD71C30CBEB0099DDED /* Main.storyboard */,
-				238EFBDA1C30CBEB0099DDED /* Images.xcassets */,
-				238EFBDC1C30CBEB0099DDED /* LaunchScreen.xib */,
 				238EFBD11C30CBEB0099DDED /* Supporting Files */,
 			);
 			path = "Cuisine-God";
@@ -90,6 +93,9 @@
 		238EFBD11C30CBEB0099DDED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				238EFBD31C30CBEB0099DDED /* AppDelegate.swift */,
+				238EFBDA1C30CBEB0099DDED /* Images.xcassets */,
+				238EFBDC1C30CBEB0099DDED /* LaunchScreen.xib */,
 				238EFBD21C30CBEB0099DDED /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -212,8 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				238EFBD61C30CBEB0099DDED /* ViewController.swift in Sources */,
+				238EFBF41C312B1B0099DDED /* LoginViewController.swift in Sources */,
+				238EFBFE1C31417B0099DDED /* RegisterViewController.swift in Sources */,
 				238EFBD41C30CBEB0099DDED /* AppDelegate.swift in Sources */,
+				238EFBFC1C31411F0099DDED /* FriendsTimelineTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
