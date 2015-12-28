@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8C8B5D02-228C-4FFC-8369-BEE76354BF4A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3DCD900DAD16C67BB2A89C78D225C798AFD163B7</key>
+		<string>https://github.com/JakeLu91/Cuisine-God-iOS-Part.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Cuisine-God/Cuisine-God.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3DCD900DAD16C67BB2A89C78D225C798AFD163B7</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JakeLu91/Cuisine-God-iOS-Part.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3DCD900DAD16C67BB2A89C78D225C798AFD163B7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3DCD900DAD16C67BB2A89C78D225C798AFD163B7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Cuisine-God-iOS-Part</string>
+		</dict>
+	</array>
+</dict>
+</plist>
