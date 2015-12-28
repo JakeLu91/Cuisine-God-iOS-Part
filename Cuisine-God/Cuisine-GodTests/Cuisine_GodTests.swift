@@ -2,12 +2,12 @@
 //  Cuisine_GodTests.swift
 //  Cuisine-GodTests
 //
-//  Created by JAKE on 12/26/15.
-//  Copyright © 2015 Jake Lu. All rights reserved.
+//  Created by JI LU on 12/27/15.
+//  Copyright (c) 2015 JI LU. All rights reserved.
 //
 
+import UIKit
 import XCTest
-@testable import Cuisine_God
 
 class Cuisine_GodTests: XCTestCase {
     
@@ -23,12 +23,12 @@ class Cuisine_GodTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssert(true, "Pass")
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measureBlock() {
             // Put the code you want to measure the time of here.
         }
     }
