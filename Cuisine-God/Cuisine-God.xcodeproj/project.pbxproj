@@ -16,6 +16,8 @@
 		238EFBFC1C31411F0099DDED /* FriendsTimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EFBFB1C31411F0099DDED /* FriendsTimelineTableViewController.swift */; };
 		238EFBFE1C31417B0099DDED /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EFBFD1C31417B0099DDED /* RegisterViewController.swift */; };
 		238EFC001C33564B0099DDED /* POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EFBFF1C33564B0099DDED /* POST.swift */; };
+		BB7660391C33AA3500850850 /* IDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7660381C33AA3500850850 /* IDGenerator.swift */; };
+		BB76603B1C33C0C500850850 /* InputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB76603A1C33C0C500850850 /* InputValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		238EFBFB1C31411F0099DDED /* FriendsTimelineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTimelineTableViewController.swift; sourceTree = "<group>"; };
 		238EFBFD1C31417B0099DDED /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		238EFBFF1C33564B0099DDED /* POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POST.swift; sourceTree = "<group>"; };
+		BB7660381C33AA3500850850 /* IDGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDGenerator.swift; sourceTree = "<group>"; };
+		BB76603A1C33C0C500850850 /* InputValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +87,7 @@
 		238EFBD01C30CBEB0099DDED /* Cuisine-God */ = {
 			isa = PBXGroup;
 			children = (
-				238EFBFF1C33564B0099DDED /* POST.swift */,
+				BB7660371C33A9EB00850850 /* model */,
 				238EFBFB1C31411F0099DDED /* FriendsTimelineTableViewController.swift */,
 				238EFBFD1C31417B0099DDED /* RegisterViewController.swift */,
 				238EFBF31C312B1B0099DDED /* LoginViewController.swift */,
@@ -119,6 +123,16 @@
 				238EFBE81C30CBEB0099DDED /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB7660371C33A9EB00850850 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				238EFBFF1C33564B0099DDED /* POST.swift */,
+				BB7660381C33AA3500850850 /* IDGenerator.swift */,
+				BB76603A1C33C0C500850850 /* InputValidation.swift */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB7660391C33AA3500850850 /* IDGenerator.swift in Sources */,
+				BB76603B1C33C0C500850850 /* InputValidation.swift in Sources */,
 				238EFC001C33564B0099DDED /* POST.swift in Sources */,
 				238EFBF41C312B1B0099DDED /* LoginViewController.swift in Sources */,
 				238EFBFE1C31417B0099DDED /* RegisterViewController.swift in Sources */,
