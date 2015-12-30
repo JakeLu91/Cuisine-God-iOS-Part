@@ -15,6 +15,7 @@
 		238EFBF41C312B1B0099DDED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EFBF31C312B1B0099DDED /* LoginViewController.swift */; };
 		238EFBFC1C31411F0099DDED /* FriendsTimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EFBFB1C31411F0099DDED /* FriendsTimelineTableViewController.swift */; };
 		238EFBFE1C31417B0099DDED /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EFBFD1C31417B0099DDED /* RegisterViewController.swift */; };
+		238EFC001C33564B0099DDED /* POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238EFBFF1C33564B0099DDED /* POST.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		238EFBF31C312B1B0099DDED /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		238EFBFB1C31411F0099DDED /* FriendsTimelineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTimelineTableViewController.swift; sourceTree = "<group>"; };
 		238EFBFD1C31417B0099DDED /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		238EFBFF1C33564B0099DDED /* POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POST.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		238EFBD01C30CBEB0099DDED /* Cuisine-God */ = {
 			isa = PBXGroup;
 			children = (
+				238EFBFF1C33564B0099DDED /* POST.swift */,
 				238EFBFB1C31411F0099DDED /* FriendsTimelineTableViewController.swift */,
 				238EFBFD1C31417B0099DDED /* RegisterViewController.swift */,
 				238EFBF31C312B1B0099DDED /* LoginViewController.swift */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				238EFC001C33564B0099DDED /* POST.swift in Sources */,
 				238EFBF41C312B1B0099DDED /* LoginViewController.swift in Sources */,
 				238EFBFE1C31417B0099DDED /* RegisterViewController.swift in Sources */,
 				238EFBD41C30CBEB0099DDED /* AppDelegate.swift in Sources */,
@@ -419,6 +423,7 @@
 				238EFBEF1C30CBEB0099DDED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		238EFBF01C30CBEB0099DDED /* Build configuration list for PBXNativeTarget "Cuisine-GodTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +432,7 @@
 				238EFBF21C30CBEB0099DDED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
