@@ -26,6 +26,10 @@ class InputValidation {
         return true
     }
     
+    func validateDuplicateUserName(userName: String) -> Bool {
+        return GET().getMemberByUserName(userName).count == 0
+    }
+    
     func validatePass(pass: String) -> Bool {
         if pass.characters.count < minLengthOfPassword {
             return false

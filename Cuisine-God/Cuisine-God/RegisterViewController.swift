@@ -33,6 +33,10 @@ class RegisterViewController: UIViewController {
                 callAlert(msg)
                 
                 return false
+            } else if !validator.validateDuplicateUserName(userNameText.text!){
+                let msg = "This user name has already been taken by another guy!"
+                callAlert(msg)
+                return false
             } else if !validator.confirmPass(passText.text!, pass2: passConfirmText.text!) {
                 let msg = "Two passwords don't match"
                 callAlert(msg)
@@ -76,14 +80,10 @@ class RegisterViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "goToHome" {
             let gender:Int = genderControl.selectedSegmentIndex
-            let userName = userNameText.text
-            let pass = passText.text
-            print("gender: \(gender)")
-            print("userName: \(userName)")
-            print("pass: \(pass)")
+            let userName = userNameText.text!
+            let pass = passText.text!
             
-            
-            
+            POST().postANewMember(userName, pass: pass, gender: gender)
             /*
             if let dvc = segue.destinationViewController as? UITabBarController {
                 
