@@ -21,9 +21,9 @@ class POST {
         let dateString = dateFormatter.stringFromDate(date)
                             
         let dict = ["id": "test", "uname": "test", "pass": "test", "gender": 0, "date": dateString]
-        let data = NSJSONSerialization.dataWithJSONObject(dict, options: NSJSONWritingOptions(0), error: nil)
+        let data = try? NSJSONSerialization.dataWithJSONObject(dict, options: NSJSONWritingOptions(rawValue: 0))
         
-        let jsonText = NSString(data: data!, encoding: NSASCIIStringEncoding)
+       
         
         
         
