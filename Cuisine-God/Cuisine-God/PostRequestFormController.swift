@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PostRequestFormController: UIViewController {
+class PostRequestFormController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     var imageURL:NSURL?
     
@@ -19,13 +19,49 @@ class PostRequestFormController: UIViewController {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         imageURL = NSURL(string: "http://cs193p.stanford.edu/Images/Panorama.jpg")
         updateImage()
         
     }
+    
+    
+    
+    @IBAction func takePhoto(sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            let photoPicker = UIImagePickerController()
+            photoPicker.sourceType = .Camera
+            photoPicker.delegate = self
+            photoPicker.allowsEditing = true
+            presentViewController(photoPicker, animated: true, completion: nil)
+        }
+        
+        
+    }
+    
+    
+    @IBAction func openPhotoLibrary(sender: UIButton) {
+        let photoPicker = UIImagePickerController()
+        photoPicker.delegate = self
+        photoPicker.sourceType = .PhotoLibrary
+        
+        self.presentViewController(photoPicker, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        var image = info[UIImagePickerControllerEditedImage] as? UIImage
+        if image == nil {
+            image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        }
+        self.imageView.image = image
+        
+        self.dismissViewControllerAnimated(false, completion: nil)
+        
+    }
+    
+    
     
     
     func updateImage() {
