@@ -64,12 +64,13 @@ class PostRequestFormController: UIViewController, UIImagePickerControllerDelega
         }
         
         
-        
+        /*
         let qos = Int(QOS_CLASS_USER_INITIATED.rawValue)
         dispatch_async(dispatch_get_global_queue(qos, 0)) { [weak self] in
             UploadAnImage().uploadANewImage(image!)
         
         }
+        */
         
         self.dismissViewControllerAnimated(false, completion: nil)
         
@@ -79,7 +80,7 @@ class PostRequestFormController: UIViewController, UIImagePickerControllerDelega
     //this method is copied from https://www.hackingwithswift.com/read/13/5/saving-to-the-ios-photo-library
     func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>) {
         if error == nil {
-            let ac = UIAlertController(title: "Saved!", message: "Your image has been saved to your photos.", preferredStyle: .Alert)
+            let ac = UIAlertController(title: "Saved!", message: "Your image has been saved to your album.", preferredStyle: .Alert)
             ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             presentViewController(ac, animated: true, completion: nil)
         } else {
@@ -105,6 +106,16 @@ class PostRequestFormController: UIViewController, UIImagePickerControllerDelega
                         }
                     }
                 }
+            }
+        }
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "GoToPostRequestDetail" {
+            if let dvc = segue.destinationViewController as? PostRequestDetailViewController {
+                
+                dvc.image = self.imageView.image
             }
         }
     }

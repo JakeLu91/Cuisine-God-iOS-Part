@@ -9,18 +9,47 @@
 import UIKit
 
 class PostRequestDetailViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var foodNameText: UITextField!
+    
+    
+    @IBOutlet weak var ingredientsText: UITextField!
+    
+    
+    @IBOutlet weak var cookingTimeText: UITextField!
+    
+    @IBOutlet weak var selfRateSegment: UISegmentedControl!
+    
+    @IBOutlet weak var imageView: UIImageView! {
+        didSet {
+            imageView.contentMode = .ScaleAspectFit
+        }
+    }
+    
+    var image:UIImage?
+    
+    @IBAction func postAPost(sender: UIButton) {
+        
+        
+        let name = foodNameText.text
+        let ingredient = ingredientsText.text
+        let cookingTime = cookingTimeText.text
+        
+        UploadAnImage().uploadANewImage(image!, name: "test")
+        
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        imageView.image = image
+        
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+   
 
     /*
     // MARK: - Navigation

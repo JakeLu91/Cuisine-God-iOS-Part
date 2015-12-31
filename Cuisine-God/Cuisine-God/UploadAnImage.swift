@@ -10,17 +10,17 @@ import Foundation
 import UIKit
 class UploadAnImage {
     
-    func uploadANewImage(image: UIImage) -> Int {
+    func uploadANewImage(image: UIImage, name: String) -> Int {
         var http_code = 200
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.timeZone = NSTimeZone(name: "UTC-8:00")
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.dateFormat = "yyyy-MM-dd_HH-mm-ss"
         
         //generate timestamp
         let date = NSDate();
         let timeString = dateFormatter.stringFromDate(date)
-        print("\(timeString)")
+        
         
         //generate current date for the member
         dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -30,7 +30,7 @@ class UploadAnImage {
         let url = NSURL(string: "http://localhost:8080/Cuisine-God-BackEnd/api/image/store")
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "POST"
-        let param = ["date": "\(dateString)", "time": "\(timeString)", "userName": "test"]
+        let param = ["date": "\(dateString)", "time": "\(timeString)", "userName": name]
         
         let boundary = generateBoundaryString()
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
@@ -41,7 +41,10 @@ class UploadAnImage {
             http_code = 400
             return http_code
         }
-        request.HTTPBody = createBodyWithParameters(param, filePathKey: "file", imageDataKey: imageData!, boundary: boundary)
+        
+        
+        let fileName = "\(name)_\(timeString).jpg"
+        request.HTTPBody = createBodyWithParameters(param, filePathKey: "file", imageDataKey: imageData!, boundary: boundary, fileName: fileName)
         
         
         
@@ -66,7 +69,7 @@ class UploadAnImage {
     }
     
     //this method is copied from http://swiftdeveloperblog.com/image-upload-example/
-    func createBodyWithParameters(parameters: [String: String]?, filePathKey: String?, imageDataKey: NSData, boundary: String) -> NSData {
+    func createBodyWithParameters(parameters: [String: String]?, filePathKey: String?, imageDataKey: NSData, boundary: String, fileName: String) -> NSData {
         let body = NSMutableData();
         
         if parameters != nil {
@@ -77,12 +80,12 @@ class UploadAnImage {
             }
         }
         
-        let filename = "us.jpg"
+        
         
         let mimetype = "image/jpg"
         
         body.appendString("--\(boundary)\r\n")
-        body.appendString("Content-Disposition: form-data; name=\"\(filePathKey!)\"; filename=\"\(filename)\"\r\n")
+        body.appendString("Content-Disposition: form-data; name=\"\(filePathKey!)\"; filename=\"\(fileName)\"\r\n")
         body.appendString("Content-Type: \(mimetype)\r\n\r\n")
         body.appendData(imageDataKey)
         body.appendString("\r\n")
