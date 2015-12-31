@@ -12,7 +12,6 @@ import Foundation
 class GET {
     
     func getMemberByUserName(uname: String) -> NSArray {
-
         let postEndPoint: String = "http://localhost:8080/Cuisine-God-BackEnd/api/member/getMemberByUname?uname=\(uname)"
         let url = NSURL(string: postEndPoint)!
         

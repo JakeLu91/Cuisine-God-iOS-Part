@@ -83,7 +83,8 @@ class RegisterViewController: UIViewController {
             let userName = userNameText.text!
             let pass = passText.text!
             
-            POST().postANewMember(userName, pass: pass, gender: gender)
+            InsertANewMember().postANewMember(userName, pass: pass, gender: gender)
+            
             /*
             if let dvc = segue.destinationViewController as? UITabBarController {
                 

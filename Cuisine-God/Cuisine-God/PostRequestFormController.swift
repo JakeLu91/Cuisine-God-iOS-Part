@@ -35,6 +35,7 @@ class PostRequestFormController: UIViewController, UIImagePickerControllerDelega
             photoPicker.delegate = self
             photoPicker.allowsEditing = true
             presentViewController(photoPicker, animated: true, completion: nil)
+            
         }
         
         
@@ -57,8 +58,35 @@ class PostRequestFormController: UIViewController, UIImagePickerControllerDelega
         }
         self.imageView.image = image
         
+        
+        if picker.sourceType == .Camera {
+            UIImageWriteToSavedPhotosAlbum(image!, self, "image:didFinishSavingWithError:contextInfo:", nil)
+        }
+        
+        
+        
+        let qos = Int(QOS_CLASS_USER_INITIATED.rawValue)
+        dispatch_async(dispatch_get_global_queue(qos, 0)) { [weak self] in
+            UploadAnImage().uploadANewImage(image!)
+        
+        }
+        
         self.dismissViewControllerAnimated(false, completion: nil)
         
+    }
+    
+    
+    //this method is copied from https://www.hackingwithswift.com/read/13/5/saving-to-the-ios-photo-library
+    func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>) {
+        if error == nil {
+            let ac = UIAlertController(title: "Saved!", message: "Your image has been saved to your photos.", preferredStyle: .Alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            presentViewController(ac, animated: true, completion: nil)
+        } else {
+            let ac = UIAlertController(title: "Save error", message: error?.localizedDescription, preferredStyle: .Alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            presentViewController(ac, animated: true, completion: nil)
+        }
     }
     
     

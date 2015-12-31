@@ -149,7 +149,7 @@
                     <connections>
                         <segue destination="xJi-47-RQa" kind="relationship" relationship="viewControllers" id="kO6-4F-JFU"/>
                         <segue destination="0PO-Mk-Uab" kind="relationship" relationship="viewControllers" id="Wr5-Uz-Ngz"/>
-                        <segue destination="wsJ-62-iCK" kind="relationship" relationship="viewControllers" id="1eG-sd-VFr"/>
+                        <segue destination="P3H-bH-5Ad" kind="relationship" relationship="viewControllers" id="1eG-sd-VFr"/>
                         <segue destination="ybD-Nc-XtV" kind="relationship" relationship="viewControllers" id="2SO-93-8mb"/>
                         <segue destination="BjR-3g-gnG" kind="relationship" relationship="viewControllers" id="jQU-RT-8TD"/>
                     </connections>
@@ -158,7 +158,7 @@
             </objects>
             <point key="canvasLocation" x="1215" y="1777"/>
         </scene>
-        <!--Post-->
+        <!--Post Request Form Controller-->
         <scene sceneID="0eW-3k-4sx">
             <objects>
                 <viewController id="wsJ-62-iCK" customClass="PostRequestFormController" customModule="Cuisine_God" customModuleProvider="target" sceneMemberID="viewController">
@@ -187,6 +187,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fb4-rn-33o">
                                 <rect key="frame" x="266" y="513" width="68" height="30"/>
                                 <state key="normal" title="Next Step"/>
+                                <connections>
+                                    <segue destination="7O2-Wa-8Ac" kind="show" identifier="GoToPostRequestDetail" id="MHI-K6-j1u"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dVA-qU-cqH">
                                 <rect key="frame" x="20" y="72" width="560" height="357"/>
@@ -207,14 +210,32 @@
                             <constraint firstItem="dVA-qU-cqH" firstAttribute="leading" secondItem="Y1Z-XB-aon" secondAttribute="leadingMargin" id="pdA-MF-xBs"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Post" id="Ie8-YK-7RO"/>
+                    <navigationItem key="navigationItem" id="b2I-t2-gWD"/>
                     <connections>
                         <outlet property="imageView" destination="dVA-qU-cqH" id="5sK-Hs-RVe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcM-VE-mEW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2473" y="1793"/>
+            <point key="canvasLocation" x="3285" y="1793"/>
+        </scene>
+        <!--Post Request Detail View Controller-->
+        <scene sceneID="SpR-NN-GfH">
+            <objects>
+                <viewController id="7O2-Wa-8Ac" customClass="PostRequestDetailViewController" customModule="Cuisine_God" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4PV-op-WKh"/>
+                        <viewControllerLayoutGuide type="bottom" id="eU4-Wj-FAa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P7W-GK-Ydu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6do-Mx-Les" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3941" y="1801"/>
         </scene>
         <!--FriendList-->
         <scene sceneID="ikZ-DW-4H0">
@@ -478,6 +499,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dKs-rP-Yy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="191" y="955"/>
+        </scene>
+        <!--Post-->
+        <scene sceneID="sz2-1V-44X">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P3H-bH-5Ad" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Post" id="Ie8-YK-7RO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lqI-VX-BAd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wsJ-62-iCK" kind="relationship" relationship="rootViewController" id="SfS-ZX-T1m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hjb-wM-rKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2473" y="1793"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
