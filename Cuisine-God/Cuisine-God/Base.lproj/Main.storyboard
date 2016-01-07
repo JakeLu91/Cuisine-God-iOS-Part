@@ -49,7 +49,6 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="loginPress:" destination="hto-wk-luc" eventType="touchUpInside" id="ywt-eE-bmV"/>
                                     <segue destination="Csq-iN-LgF" kind="show" identifier="goToHome" id="JLX-zV-niq"/>
                                 </connections>
                             </button>
@@ -62,14 +61,13 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="registerPress:" destination="hto-wk-luc" eventType="touchUpInside" id="KBF-9i-2nh"/>
                                     <segue destination="61v-f4-YzB" kind="show" identifier="goToRegister" id="B4c-ax-8TG"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k6w-df-RkT">
                                 <rect key="frame" x="210" y="240" width="180" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNu-aW-euf">
                                 <rect key="frame" x="210" y="72" width="180" height="39"/>
@@ -582,7 +580,7 @@
         <!--Profile-->
         <scene sceneID="RJz-fi-snW">
             <objects>
-                <viewController id="BjR-3g-gnG" sceneMemberID="viewController">
+                <viewController id="BjR-3g-gnG" customClass="ProfileViewController" customModule="Cuisine_God" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VZE-Y0-P9h"/>
                         <viewControllerLayoutGuide type="bottom" id="A1R-i6-Eic"/>
@@ -590,13 +588,28 @@
                     <view key="view" contentMode="scaleToFill" id="LKt-Xc-dgN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4j-kH-dVU">
+                                <rect key="frame" x="276" y="513" width="48" height="30"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="0.14117647707462311" blue="0.10588236153125763" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="QO1-lF-NMo" kind="show" identifier="Logout" id="N9L-vz-q4g"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A1R-i6-Eic" firstAttribute="top" secondItem="U4j-kH-dVU" secondAttribute="bottom" constant="8" symbolic="YES" id="6gp-kQ-qak"/>
+                            <constraint firstItem="U4j-kH-dVU" firstAttribute="centerX" secondItem="LKt-Xc-dgN" secondAttribute="centerX" id="He7-p5-Jd3"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="yKP-gM-jXK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X89-ii-moT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2473" y="3944"/>
+            <point key="canvasLocation" x="2723" y="3730"/>
         </scene>
         <!--Recipe-->
         <scene sceneID="zcx-cI-2gx">
@@ -800,6 +813,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mer-5w-4QK"/>
+        <segue reference="JLX-zV-niq"/>
     </inferredMetricsTieBreakers>
 </document>
