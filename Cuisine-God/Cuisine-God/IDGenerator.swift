@@ -11,18 +11,21 @@ import Darwin
 
 class IDGenerator {
     
-    //member ID is a 6-charactor word
-    func memberID() -> String {
+    
+    //MemberID: 6-digit
+    //PostID: 20-digit
+    //ImageID: 18-digit
+    func getID(length: Int) -> String {
         var result: String = ""
         
-        for var i = 0; i < 6; i++ {
+        for var i = 0; i < length; i++ {
             
             let digitOrCapOrLower = arc4random() % 3
             var c = "\(digitOrCapOrLower)"
             switch digitOrCapOrLower {
             case 0:
                 c = "\(arc4random() % 10)"
-
+                
             case 1:
                 let order = arc4random() % 26
                 
@@ -41,7 +44,6 @@ class IDGenerator {
         
         return result
     }
-
 
 }
 

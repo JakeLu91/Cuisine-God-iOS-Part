@@ -21,7 +21,8 @@ class InsertANewMember {
         let dateString = dateFormatter.stringFromDate(date)
         
         //generate id for the member
-        let id = IDGenerator().memberID()
+        //memberId is 6-digit
+        let id = IDGenerator().getID(6)
         
         let dict: [String: AnyObject] = ["id": id, "uname": uname, "pass": pass, "gender": gender, "date": dateString]
         

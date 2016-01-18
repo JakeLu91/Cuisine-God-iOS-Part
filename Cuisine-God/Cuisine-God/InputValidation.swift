@@ -12,6 +12,36 @@ class InputValidation {
     
     let minLengthOfPassword = 6
     let DIGIT_AND_LETTER:String = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    let DIGIT_AND_POINT:String = "0123456789."
+    let SIGNALS:String = ".,_-()+ "
+    
+    
+    func validateText(text: String) -> Bool {
+        if text.characters.count == 0 {
+            return false
+        }
+        
+        for var i = 0; i < text.characters.count; i++ {
+            if !isValidTextInput(text[i]) {
+                return false
+            }
+        }
+        return true
+    }
+    
+    func validateDoubleInput(doubleNumber: String) -> Bool {
+        if (doubleNumber.characters.count == 0) {
+            return false
+        }
+        for var i = 0; i < doubleNumber.characters.count; i++ {
+            if !isValidDoubleNumberInput(doubleNumber[i]) {
+                return false
+            }
+        }
+        return true
+        
+    }
+    
     
     func validateUserName(userName: String) -> Bool {
         if userName.characters.count == 0 {
@@ -58,7 +88,31 @@ class InputValidation {
             }
         }
         return false
-
+    }
+    
+    func isValidTextInput(c: Character) -> Bool {
+        for var i = 0; i < DIGIT_AND_LETTER.characters.count; i++ {
+            if c == DIGIT_AND_LETTER[i] {
+                return true
+            }
+        }
+        for var i = 0; i < SIGNALS.characters.count; i++ {
+            if c == SIGNALS[i] {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
+    func isValidDoubleNumberInput(c: Character) -> Bool {
+        for var i = 0; i < DIGIT_AND_POINT.characters.count; i++ {
+            if c == DIGIT_AND_POINT[i] {
+                return true
+            }
+        }
+        
+        return false
     }
     
     
