@@ -59,11 +59,9 @@ class UploadAnImage {
             }
             
             if let postString = NSString(data: data!, encoding: NSUTF8StringEncoding) as? String {
-                print("POST: " + postString)
+                print("POST: File saved to server location: " + postString)
             }
         }).resume()
-        
-        
         return http_code
         
     }

@@ -12,9 +12,9 @@ import Darwin
 class IDGenerator {
     
     
-    //MemberID: 6-digit
-    //PostID: 20-digit
-    //ImageID: 18-digit
+    //MemberID: 6-length
+    //PostID: 20-length
+    //ImageID: 22-length this will be generated at the backend, and will not has digit in it
     func getID(length: Int) -> String {
         var result: String = ""
         

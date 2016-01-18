@@ -62,12 +62,11 @@ class PostRequestDetailViewController: UIViewController {
         
         let defaults = NSUserDefaults.standardUserDefaults()
         let userID = defaults.stringForKey("id")
-        
-        print(userID)
-        
+        let userName = defaults.stringForKey("uname")
         
         
-        //UploadAnImage().uploadANewImage(image!, name: "test")
+        UploadAnImage().uploadANewImage(image!, name: "\(userName!)")
+        
         
     }
     
