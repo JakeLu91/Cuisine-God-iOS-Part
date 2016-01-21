@@ -88,7 +88,6 @@ class RegisterViewController: UIViewController {
             
             
             while (memberAdder.memberId == nil) {
-                
             }
             
             let defaults = NSUserDefaults.standardUserDefaults()

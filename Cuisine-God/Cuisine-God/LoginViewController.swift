@@ -28,9 +28,7 @@ class LoginViewController: UIViewController {
     
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        
-        
-        
+
         if identifier == "goToHome" {
             let defaults = NSUserDefaults.standardUserDefaults()
             let uname = unameText.text
@@ -91,15 +89,6 @@ class LoginViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "goToHome" {
-            if let dvc = segue.destinationViewController as? UITabBarController {
-                let defaults = NSUserDefaults.standardUserDefaults()
-                
-                
-                
-                
-            }
-        }
     }
 
 }

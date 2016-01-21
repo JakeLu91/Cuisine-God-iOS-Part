@@ -20,6 +20,9 @@
 		BB76603B1C33C0C500850850 /* InputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB76603A1C33C0C500850850 /* InputValidation.swift */; };
 		BB76603D1C33E0BD00850850 /* GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB76603C1C33E0BD00850850 /* GET.swift */; };
 		BBD93BDC1C50700E006B3D10 /* UploadViaJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD93BDB1C50700E006B3D10 /* UploadViaJSON.swift */; };
+		BBD93BE21C50A053006B3D10 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD93BE11C50A053006B3D10 /* DiscoverViewController.swift */; };
+		BBD93BE51C50A4E1006B3D10 /* UserSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD93BE41C50A4E1006B3D10 /* UserSearchResultViewController.swift */; };
+		BBD93BEB1C50D9FD006B3D10 /* DELETE.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD93BEA1C50D9FD006B3D10 /* DELETE.swift */; };
 		BBE5BD491C34C69F004E78D0 /* PostRequestFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5BD481C34C69F004E78D0 /* PostRequestFormController.swift */; };
 		BBE5BD4B1C34F80D004E78D0 /* PostRequestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5BD4A1C34F80D004E78D0 /* PostRequestDetailViewController.swift */; };
 		BBE5BD4F1C35314B004E78D0 /* InsertANewMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5BD4E1C35314B004E78D0 /* InsertANewMember.swift */; };
@@ -54,6 +57,9 @@
 		BB76603A1C33C0C500850850 /* InputValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputValidation.swift; sourceTree = "<group>"; };
 		BB76603C1C33E0BD00850850 /* GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GET.swift; sourceTree = "<group>"; };
 		BBD93BDB1C50700E006B3D10 /* UploadViaJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViaJSON.swift; sourceTree = "<group>"; };
+		BBD93BE11C50A053006B3D10 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		BBD93BE41C50A4E1006B3D10 /* UserSearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchResultViewController.swift; sourceTree = "<group>"; };
+		BBD93BEA1C50D9FD006B3D10 /* DELETE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DELETE.swift; sourceTree = "<group>"; };
 		BBE5BD481C34C69F004E78D0 /* PostRequestFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRequestFormController.swift; sourceTree = "<group>"; };
 		BBE5BD4A1C34F80D004E78D0 /* PostRequestDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRequestDetailViewController.swift; sourceTree = "<group>"; };
 		BBE5BD4E1C35314B004E78D0 /* InsertANewMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertANewMember.swift; sourceTree = "<group>"; };
@@ -140,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				BB76603C1C33E0BD00850850 /* GET.swift */,
+				BBD93BEA1C50D9FD006B3D10 /* DELETE.swift */,
 				BB7660381C33AA3500850850 /* IDGenerator.swift */,
 				BB76603A1C33C0C500850850 /* InputValidation.swift */,
 				BBE5BD4E1C35314B004E78D0 /* InsertANewMember.swift */,
@@ -152,12 +159,11 @@
 		BB76603E1C33F6C400850850 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				238EFBFB1C31411F0099DDED /* FriendsTimelineTableViewController.swift */,
-				238EFBFD1C31417B0099DDED /* RegisterViewController.swift */,
-				238EFBF31C312B1B0099DDED /* LoginViewController.swift */,
-				BBE5BD481C34C69F004E78D0 /* PostRequestFormController.swift */,
-				BBE5BD4A1C34F80D004E78D0 /* PostRequestDetailViewController.swift */,
-				BB5971361C3E51510061537A /* ProfileViewController.swift */,
+				BBD93BE91C50A97B006B3D10 /* Timeline */,
+				BBD93BE81C50A96D006B3D10 /* Profile */,
+				BBD93BE71C50A959006B3D10 /* Post */,
+				BBD93BE61C50A93C006B3D10 /* RegisterLogin */,
+				BBD93BE31C50A496006B3D10 /* Discover */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -167,6 +173,49 @@
 			children = (
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		BBD93BE31C50A496006B3D10 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				BBD93BE11C50A053006B3D10 /* DiscoverViewController.swift */,
+				BBD93BE41C50A4E1006B3D10 /* UserSearchResultViewController.swift */,
+			);
+			name = Discover;
+			sourceTree = "<group>";
+		};
+		BBD93BE61C50A93C006B3D10 /* RegisterLogin */ = {
+			isa = PBXGroup;
+			children = (
+				238EFBFD1C31417B0099DDED /* RegisterViewController.swift */,
+				238EFBF31C312B1B0099DDED /* LoginViewController.swift */,
+			);
+			name = RegisterLogin;
+			sourceTree = "<group>";
+		};
+		BBD93BE71C50A959006B3D10 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				BBE5BD481C34C69F004E78D0 /* PostRequestFormController.swift */,
+				BBE5BD4A1C34F80D004E78D0 /* PostRequestDetailViewController.swift */,
+			);
+			name = Post;
+			sourceTree = "<group>";
+		};
+		BBD93BE81C50A96D006B3D10 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BB5971361C3E51510061537A /* ProfileViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		BBD93BE91C50A97B006B3D10 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				238EFBFB1C31411F0099DDED /* FriendsTimelineTableViewController.swift */,
+			);
+			name = Timeline;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +329,10 @@
 				BB76603D1C33E0BD00850850 /* GET.swift in Sources */,
 				BB5971371C3E51510061537A /* ProfileViewController.swift in Sources */,
 				238EFBFE1C31417B0099DDED /* RegisterViewController.swift in Sources */,
+				BBD93BE51C50A4E1006B3D10 /* UserSearchResultViewController.swift in Sources */,
 				238EFBD41C30CBEB0099DDED /* AppDelegate.swift in Sources */,
+				BBD93BEB1C50D9FD006B3D10 /* DELETE.swift in Sources */,
+				BBD93BE21C50A053006B3D10 /* DiscoverViewController.swift in Sources */,
 				BBE5BD4F1C35314B004E78D0 /* InsertANewMember.swift in Sources */,
 				BBE5BD491C34C69F004E78D0 /* PostRequestFormController.swift in Sources */,
 				238EFBFC1C31411F0099DDED /* FriendsTimelineTableViewController.swift in Sources */,

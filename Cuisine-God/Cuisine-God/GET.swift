@@ -29,6 +29,20 @@ class GET {
         return data
     }
     
+    func getAFollowing(id: String, following: String) -> NSArray {
+        let postEndPoint: String = "http://localhost:8080/Cuisine-God-BackEnd/api/friends/getAFollowing?id=\(id)&following=\(following)"
+        let url = NSURL(string: postEndPoint)!
+        let jData:NSData? = NSData(contentsOfURL: url)
+        var data = []
+        
+        do {
+            data = try NSJSONSerialization.JSONObjectWithData(jData!, options: .AllowFragments) as! [[String: AnyObject]]
+        }catch {
+            print("shit!")
+        }
+        
+        return data
+    }
     
    
     
