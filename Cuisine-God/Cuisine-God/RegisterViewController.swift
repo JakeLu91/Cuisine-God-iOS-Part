@@ -83,7 +83,19 @@ class RegisterViewController: UIViewController {
             let userName = userNameText.text!
             let pass = passText.text!
             
-            InsertANewMember().postANewMember(userName, pass: pass, gender: gender)
+            let memberAdder = InsertANewMember()
+            memberAdder.postANewMember(userName, pass: pass, gender: gender)
+            
+            
+            while (memberAdder.memberId == nil) {
+                
+            }
+            
+            let defaults = NSUserDefaults.standardUserDefaults()
+            
+            defaults.setObject(memberAdder.memberId, forKey: "id")
+            defaults.setObject(userName, forKey: "uname")
+            defaults.setObject(passText.text!, forKey: "pass")
             
             /*
             if let dvc = segue.destinationViewController as? UITabBarController {

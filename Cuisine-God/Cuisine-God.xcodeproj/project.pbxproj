@@ -19,6 +19,7 @@
 		BB7660391C33AA3500850850 /* IDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7660381C33AA3500850850 /* IDGenerator.swift */; };
 		BB76603B1C33C0C500850850 /* InputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB76603A1C33C0C500850850 /* InputValidation.swift */; };
 		BB76603D1C33E0BD00850850 /* GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB76603C1C33E0BD00850850 /* GET.swift */; };
+		BBD93BDC1C50700E006B3D10 /* UploadViaJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD93BDB1C50700E006B3D10 /* UploadViaJSON.swift */; };
 		BBE5BD491C34C69F004E78D0 /* PostRequestFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5BD481C34C69F004E78D0 /* PostRequestFormController.swift */; };
 		BBE5BD4B1C34F80D004E78D0 /* PostRequestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5BD4A1C34F80D004E78D0 /* PostRequestDetailViewController.swift */; };
 		BBE5BD4F1C35314B004E78D0 /* InsertANewMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5BD4E1C35314B004E78D0 /* InsertANewMember.swift */; };
@@ -52,6 +53,7 @@
 		BB7660381C33AA3500850850 /* IDGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDGenerator.swift; sourceTree = "<group>"; };
 		BB76603A1C33C0C500850850 /* InputValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputValidation.swift; sourceTree = "<group>"; };
 		BB76603C1C33E0BD00850850 /* GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GET.swift; sourceTree = "<group>"; };
+		BBD93BDB1C50700E006B3D10 /* UploadViaJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViaJSON.swift; sourceTree = "<group>"; };
 		BBE5BD481C34C69F004E78D0 /* PostRequestFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRequestFormController.swift; sourceTree = "<group>"; };
 		BBE5BD4A1C34F80D004E78D0 /* PostRequestDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRequestDetailViewController.swift; sourceTree = "<group>"; };
 		BBE5BD4E1C35314B004E78D0 /* InsertANewMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertANewMember.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				BB76603A1C33C0C500850850 /* InputValidation.swift */,
 				BBE5BD4E1C35314B004E78D0 /* InsertANewMember.swift */,
 				BBE5BD501C353162004E78D0 /* UploadAnImage.swift */,
+				BBD93BDB1C50700E006B3D10 /* UploadViaJSON.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				BBE5BD4F1C35314B004E78D0 /* InsertANewMember.swift in Sources */,
 				BBE5BD491C34C69F004E78D0 /* PostRequestFormController.swift in Sources */,
 				238EFBFC1C31411F0099DDED /* FriendsTimelineTableViewController.swift in Sources */,
+				BBD93BDC1C50700E006B3D10 /* UploadViaJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

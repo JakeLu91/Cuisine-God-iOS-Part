@@ -44,30 +44,38 @@ class PostRequestDetailViewController: UIViewController {
             callAlert("Invalid symbol included in your Ingredients")
         } else if !validator.validateDoubleInput(cookingTime!) {
             callAlert("Invalid cooking time")
+        } else {
+            let selfRate = selfRateSegment.selectedSegmentIndex
+            
+            //generate timestamp
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.timeZone = NSTimeZone(name: "UTC-8:00")
+            dateFormatter.dateFormat = "yyyy-MM-dd_HH-mm-ss"
+            let date = NSDate();
+            let timeString = dateFormatter.stringFromDate(date)
+            
+            
+            let id = IDGenerator().getID(20)
+            
+            let defaults = NSUserDefaults.standardUserDefaults()
+            let userID = defaults.stringForKey("id")
+            let userName = defaults.stringForKey("uname")
+            
+            
+            let uploader = UploadAnImage()
+            uploader.uploadANewImage(image!, name: "\(userName!)")
+            
+            
+            print("Posting!")
+            while uploader.imageId == nil {
+            }
+
+            
+            let dict: [String: AnyObject] = ["id": id, "name": name!, "ingredients": ingredient!, "timeToCook": Double(cookingTime!)!, "pictureId": uploader.imageId!, "selfOpinion": selfRate, "recipeId": "", "timeStamp": timeString, "userId": userID!]
+            let url = "http://localhost:8080/Cuisine-God-BackEnd/api/post/create"
+            UploadViaJSON().upload(dict, postEndPoint: url)
         }
-        
-    
-        let selfRate = selfRateSegment.selectedSegmentIndex
-        
-        //generate timestamp
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.timeZone = NSTimeZone(name: "UTC-8:00")
-        dateFormatter.dateFormat = "yyyy-MM-dd_HH-mm-ss"
-        let date = NSDate();
-        let timeString = dateFormatter.stringFromDate(date)
-        
-        
-        let id = IDGenerator().getID(20)
-        print(id)
-        
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let userID = defaults.stringForKey("id")
-        let userName = defaults.stringForKey("uname")
-        
-        
-        UploadAnImage().uploadANewImage(image!, name: "\(userName!)")
-        
-        
+
     }
     
     

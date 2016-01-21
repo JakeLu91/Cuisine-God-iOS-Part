@@ -9,8 +9,11 @@
 import Foundation
 import UIKit
 class UploadAnImage {
+    var imageId: String?
     
     func uploadANewImage(image: UIImage, name: String) -> Int {
+        
+        
         var http_code = 200
         
         let dateFormatter = NSDateFormatter()
@@ -59,7 +62,8 @@ class UploadAnImage {
             }
             
             if let postString = NSString(data: data!, encoding: NSUTF8StringEncoding) as? String {
-                print("POST: File saved to server location: " + postString)
+                print("POST: Saved a new Image with id: " + postString)
+                self.imageId = postString
             }
         }).resume()
         return http_code

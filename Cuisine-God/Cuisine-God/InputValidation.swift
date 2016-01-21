@@ -13,7 +13,7 @@ class InputValidation {
     let minLengthOfPassword = 6
     let DIGIT_AND_LETTER:String = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     let DIGIT_AND_POINT:String = "0123456789."
-    let SIGNALS:String = ".,_-()+ "
+    let SIGNALS:String = ".,_-()+ !?"
     
     
     func validateText(text: String) -> Bool {
